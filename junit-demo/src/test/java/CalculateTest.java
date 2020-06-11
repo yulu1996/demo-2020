@@ -6,9 +6,16 @@ import static org.junit.Assert.*;
 
 public class CalculateTest {
 
-    BigDecimal bignum1 = new BigDecimal("6");
-    BigDecimal bignum2 = new BigDecimal("3");
+    BigDecimal bignum1 = new BigDecimal("11");
+    BigDecimal bignum2 = new BigDecimal("10.9");
 
+    BigDecimal a = new BigDecimal(11);
+    BigDecimal b = new BigDecimal("10.9");
+    @Test
+    public void tt(){
+        System.out.println(a.subtract(b));
+        assertEquals(new BigDecimal("9"),a.subtract(b));
+    }
     @Test
     public void testAdd(){
         assertEquals(new BigDecimal("9"),new Calculate().add(bignum1, bignum2));
